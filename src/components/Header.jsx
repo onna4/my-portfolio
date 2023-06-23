@@ -7,21 +7,21 @@ export default function Header() {
   const smallMenuRef = useRef(null)
   const [showButton, setShowButton] = useState(false)
 
-    const showMenu = () => {
-      if (smallMenuRef.current.classList.contains('header__sm-menu--active')) {
-        smallMenuRef.current.classList.remove('header__sm-menu--active')
-        setShowButton(true)
-      }
-      else {
-        smallMenuRef.current.classList.add('header__sm-menu--active')
-        setShowButton(false)
-      }
-    }
-
-    const hideMenu = () => {
+  const showMenu = () => {
+    if (smallMenuRef.current.classList.contains('header__sm-menu--active')) {
       smallMenuRef.current.classList.remove('header__sm-menu--active')
       setShowButton(true)
     }
+    else {
+      smallMenuRef.current.classList.add('header__sm-menu--active')
+      setShowButton(false)
+    }
+  }
+
+  const hideMenu = () => {
+    smallMenuRef.current.classList.remove('header__sm-menu--active')
+    setShowButton(true)
+  }
 
   return (
     <header className="header">

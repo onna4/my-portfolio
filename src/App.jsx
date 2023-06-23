@@ -8,7 +8,6 @@ import Footer from './components/Footer.jsx'
 import React from 'react'
 
 function App() {
-
   return (
     <>
       <Header />

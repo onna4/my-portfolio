@@ -30,11 +30,9 @@ export default function About() {
               <div className="skills__skill">CSS</div>
               <div className="skills__skill">JavaScript</div>
               <div className="skills__skill">React</div>
-              <div className="skills__skill">TypeScript</div>
               <div className="skills__skill">Git</div>
               <div className="skills__skill">Figma</div>
               <div className="skills__skill">Tailwind CSS</div>
-              <div className="skills__skill">Jasmine</div>
             </div>
           </div>
         </div>
