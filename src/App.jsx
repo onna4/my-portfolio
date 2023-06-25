@@ -1,20 +1,23 @@
 import './App.css'
-import Header from './components/Header.jsx'
-import Hero from './components/Hero.jsx'
-import Projects from './components/Projects'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer.jsx'
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Shortly from './pages/Shortly'
+import Dashboard from './pages/Dashboard'
+import PortfolioEx from './pages/PortfolioEx'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <Projects />
-      <About />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shortly" element={<Shortly />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/portfolio" element={<PortfolioEx />} />
+      </Routes>
       <Footer />
     </>
   )
