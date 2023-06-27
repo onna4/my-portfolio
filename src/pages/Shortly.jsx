@@ -15,7 +15,7 @@ export default function Shortly() {
                         </p>
                     </div>
                     <div class="project-cs-hero__cta">
-                        <a href="#" class="btn btn--bg" target="_blank">Live Link</a>
+                        <a href="https://shorty-url-shortening-api.vercel.app/" class="btn btn--bg" target="_blank">Live Link</a>
                     </div>
                 </div>
             </section>

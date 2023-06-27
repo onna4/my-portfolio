@@ -6,16 +6,16 @@ export default function PersonalDashboard() {
     <>
       <section class="project-cs-hero">
         <div class="project-cs-hero__content">
-          <h1 class="heading-primary">Project 1</h1>
+          <h1 class="heading-primary">Personal Dashboard</h1>
           <div class="project-cs-hero__info">
             <p class="text-primary">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-              in numquam incidunt earum quaerat cum fuga, atque similique natus
-              nobis sit.
+              A Chrome Extension that gives you an overview over the current time,
+              how the weather is like and how Dogecoin is performing.
+              Interacts with multiple APIs using async JS.
             </p>
           </div>
           <div class="project-cs-hero__cta">
-            <a href="#" class="btn btn--bg" target="_blank">Live Link</a>
+            <a href="https://onna4.github.io/personal-dashboard/" class="btn btn--bg" target="_blank">Live Link</a>
           </div>
         </div>
       </section>
@@ -50,7 +50,7 @@ export default function PersonalDashboard() {
               <div class="project-details__links">
                 <h3 class="project-details__content-title">See Live</h3>
                 <a
-                  href="#"
+                  href="https://onna4.github.io/personal-dashboard/"
                   class="btn btn--med btn--theme project-details__links-btn"
                   target="_blank"
                 >Live Link</a>

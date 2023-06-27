@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__content">
-        <a className="header__logo-container" href="./index.html" >
+        <a className="header__logo-container" href="/" >
           <div className="header__logo-img-cont">
             <img
               src={profile}
