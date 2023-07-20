@@ -57,14 +57,14 @@ export default function projectItem() {
                 <h3 className="text-[2.4rem] md:text-[2.8rem] font-bold mb-12">See Live</h3>
                 <a
                   href={project.liveLink}
-                  className="uppercase font-bold rounded-md tracking-[2px] shadow-lg transition-transform hover:translate-y-[-3px]
-                  text-[1.6rem] py-6 px-20 text-white mr-0 md:mr-8 mb-8 text-center w-9/12 bg-gradient-to-r from-red-variant to-violet-variant"
+                  className="uppercase block md:inline mx-auto font-bold rounded-md tracking-[2px] shadow-lg transition-transform !hover:translate-y-[-3px]
+                  text-[1.6rem] py-6 px-20 text-white md:mr-8 mb-8 text-center w-9/12 bg-gradient-to-r from-red-variant to-violet-variant"
                   target="_blank"
                 >Live Link</a>
                 <a
                   href={project.sourceCode}
-                  className="uppercase font-bold bg-white rounded-md tracking-[2px] shadow-lg transition-transform hover:translate-y-[-3px] text-violet-600 
-                  text-[1.6rem] py-6 px-20 border-2 border-solid border-violet-300 mr-0 text-center w-9/12"
+                  className="uppercase block md:inline mx-auto font-bold bg-white rounded-md tracking-[2px] shadow-lg transition-transform hover:translate-y-[-3px] text-violet-600 
+                  text-[1.6rem] py-6 px-20 border-2 border-solid border-violet-300 md:mr-0 text-center w-9/12"
                   target="_blank"
                 >Code Link</a>
               </div>
