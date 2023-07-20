@@ -1,76 +1,51 @@
 import React from 'react'
-import shortly from '../assets/img/project1.jpg'
-import portfolio from '../assets/img/project2.png'
-import dash from '../assets/img/dashboard 3.png'
+import projectsData from'./projectsData.js'
 import { Link } from 'react-router-dom'
+import { imgfiles } from '../pages/ProjectItem'
 
 export default function Projects() {
+
+  const projectItems = projectsData.map( (project, index) =>
+  (
+    <div key={index} className="grid gap-8 mb-32 md:grid-cols-[1.5fr_1fr] md:gap-20 md:mb-44 md:text-center [&>*:last-child]:mb-20">
+      <div className="overflow-hidden">
+        {imgfiles.map((img, index) =>
+          img.name === project.path ?
+            <img
+              key={index}
+              src={img.link}
+              alt="Software Screenshot"
+              className="w-full block object-cover"
+            />
+            : "")}
+      </div>
+      <div className= "flex justify-center flex-col items-center md:items-start py-8">
+        <h3 className="xl:font-bold text-4xl md:text-5xl mb-8">{project.title}</h3>
+        <p className="text-3xl text-gray-400 max-w-4xl leading-relaxed mb-12">
+          {project.description}
+        </p>
+        <Link
+          to={project.link}
+          className="uppercase inline-block font-bold rounded-md tracking-wider shadow-lg transition-transform
+          hover:translate-y-[-3px]
+          text-[1.6rem] py-6 px-20 text-white dynamicBgClr
+          bg-gradient-to-r from-red-variant to-violet-variant">Learn more</Link>
+      </div>
+    </div>
+  ))
+
   return (
     <section id="projects" className="projects sec-pad">
-      <div className="main-container">
-        <h2 className="heading heading-sec heading-sec__mb-bg">
-          <span className="heading-sec__main">Projects</span>
-          <span className="heading-sec__sub">
+      <div className="main-container"> 
+      {/* add main-container in seperate component for all app */}
+        <h2 className="heading heading-sec mb-32 lg:mb-44">
+          <span className="heading-sec__main block uppercase relative text-center text-[4rem] tracking-wide mb-14 font-bold">Projects</span>
+          <span className="block text-center m-auto text-gray-500 text-3xl md:text-[2rem] font-medium max-w-7xl leading-relaxed">
             All my projects include links to the code and live version. Click the button to learn more about each one.
           </span>
         </h2>
-
         <div className="projects__content">
-          <div className="projects__row">
-            <div className="projects__row-img-cont">
-              <img
-                src={shortly}
-                alt="Software Screenshot"
-                className="projects__row-img"
-              />
-            </div>
-            <div className="projects__row-content">
-              <h3 className="projects__row-content-title">Shortly App</h3>
-              <p className="projects__row-content-desc">
-                Shortly is an app integrated with the shrtcode API to create shortened URLs and display them to the user with an option to copy or delete the shortened links.
-                It's built with functional React components and using local storage to save user's shortened URL's.
-              </p>
-              <Link
-                to="/shortly"
-                className="btn btn--med btn--theme dynamicBgClr">Learn more</Link>
-            </div>
-          </div>
-          <div className="projects__row">
-            <div className="projects__row-img-cont">
-              <img
-                src={dash}
-                alt="Software Screenshot"
-                className="projects__row-img"
-              />
-            </div>
-            <div className="projects__row-content">
-              <h3 className="projects__row-content-title">Personal Dashboard</h3>
-              <p className="projects__row-content-desc">
-                A Chrome Extension that gives you an overview over the current time, how the weather is like and how Dogecoin is performing. Interacts with multiple APIs using async JS.
-              </p>
-              <Link
-                to="/dashboard"
-                className="btn btn--med btn--theme dynamicBgClr">Learn more</Link>
-            </div>
-          </div>
-          <div className="projects__row">
-            <div className="projects__row-img-cont">
-              <img
-                src={portfolio}
-                alt="Software Screenshot"
-                className="projects__row-img"
-              />
-            </div>
-            <div className="projects__row-content">
-              <h3 className="projects__row-content-title">Portfolio Example</h3>
-              <p className="projects__row-content-desc">
-                A website built as an example of a portfolio. Built with React and styled with Chakra UI and form is handled with Formik and Yup.
-              </p>
-              <Link
-                to="/portfolio"
-                className="btn btn--med btn--theme dynamicBgClr">Learn more</Link>
-            </div>
-          </div>
+          {projectItems}
         </div>
       </div>
     </section>

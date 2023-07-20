@@ -2,9 +2,7 @@ import './App.css'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Shortly from './pages/Shortly'
-import Dashboard from './pages/Dashboard'
-import PortfolioEx from './pages/PortfolioEx'
+import ProjectItem from './pages/ProjectItem'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -14,9 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shortly" element={<Shortly />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/portfolio" element={<PortfolioEx />} />
+        <Route path='/:path' element={<ProjectItem />} />
       </Routes>
       <Footer />
     </>

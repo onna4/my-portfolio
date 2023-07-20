@@ -2,11 +2,13 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <section id="contact" className="contact sec-pad dynamicBg">
+    <section id="contact" className="contact sec-pad dynamicBg
+    bg-gradient-to-r from-red-variant to-violet-variant">
       <div className="main-container">
-        <h2 className="heading heading-sec heading-sec__mb-med">
-          <span className="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span className="heading-sec__sub heading-sec__sub--lt">
+        <h2 className="heading heading-sec mb-32 lg:mb-36">
+          <span className="text-white block uppercase relative text-center text-[4rem] tracking-wide mb-14 font-bold
+          after:absolute after:h-2.5 after:w-12 after:left-2/4 after:rounded-md after:bg-white after:-translate-x-2/4 after:top-[calc(100%+1.2rem)] md:after:top-[calc(100%+1.5rem)]">Contact</span>
+          <span className="block text-center m-auto text-gray-300 text-3xl md:text-[2rem] font-medium max-w-7xl leading-relaxed">
             Please reach out if you have any questions! I'm happy to brainstorm projects and ideas. Send me an email at omnia.hefzy@gmail.com
           </span>
         </h2>

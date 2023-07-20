@@ -3,42 +3,35 @@ import linkedinIco from '../assets/img/linkedin-ico.png'
 import githubIco from '../assets/img/github-ico.png'
 import codepenIco from '../assets/img/codepen-ico.png'
 
+export const iconArr = [{link: 'https://www.linkedin.com/in/omnia-abdelwahab-170306249/' , src: linkedinIco}, 
+                  {link: "https://github.com/onna4" , src: githubIco}, 
+                  {link: "https://codepen.io/omniahefz" , src: codepenIco}]
+const icons = iconArr.map((icon, index) => 
+              <a target="_blank" rel="noreferrer" href={icon.link} key={index} >
+                <img
+                  className="mr-4 w-10"
+                  src={icon.src}
+                  alt="icon"
+                />
+              </a>
+            )
+
 function Footer() {
   return (
-    <footer className="main-footer">
+    <footer className="bg-[black] text-[white]">
       <div className="main-container">
-        <div className="main-footer__upper">
-          <div className="main-footer__row main-footer__row-1">
-            <h2 className="heading heading-sm main-footer__heading-sm">
+        <div className="md:flex justify-between block text-center py-24 lg:py-32">
+          <div className="main-footer__row order-2 mb-20">
+            <h2 className="heading uppercase text-4xl tracking-wide	main-footer__heading-sm">
               <span>Social</span>
             </h2>
-            <div className="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/omnia-abdelwahab-170306249/">
-                <img
-                  className="main-footer__icon"
-                  src={linkedinIco}
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/onna4">
-                <img
-                  className="main-footer__icon"
-                  src={githubIco}
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://codepen.io/omniahefz">
-                <img
-                  className="main-footer__icon"
-                  src={codepenIco}
-                  alt="icon"
-                />
-              </a>
+            <div className="flex justify-center mt-8">
+              {icons}
             </div>
           </div>
-          <div className="main-footer__row main-footer__row-2">
-            <h4 className="heading heading-sm text-lt">Omnia Abdelwahab</h4>
-            <p className="main-footer__short-desc">
+          <div className="main-footer__row md:w-5/12 max-w-3xl w-full">
+            <h4 className="heading uppercase text-4xl tracking-wide	text-lt">Omnia Abdelwahab</h4>
+            <p className="mt-8 text-2xl leading-relaxed text-[#eee]">
               A passionate frontend developer based in Istanbul, Turkey.
             </p>
           </div>
