@@ -27,26 +27,22 @@ export default function Projects() {
         <Link
           to={project.link}
           className="uppercase inline-block font-bold rounded-md tracking-wider shadow-lg transition-transform
-          hover:translate-y-[-3px]
-          text-[1.6rem] py-6 px-20 text-white dynamicBgClr
+          hover:translate-y-[-3px] text-[1.6rem] py-6 px-20 text-white 
           bg-gradient-to-r from-red-variant to-violet-variant">Learn more</Link>
       </div>
     </div>
   ))
 
   return (
-    <section id="projects" className="projects sec-pad">
-      <div className="main-container"> 
-      {/* add main-container in seperate component for all app */}
-        <h2 className="heading heading-sec mb-32 lg:mb-44">
-          <span className="heading-sec__main block uppercase relative text-center text-[4rem] tracking-wide mb-14 font-bold">Projects</span>
+    <section id="projects" className="py-32 lg:py-48">
+      <div className="m-auto w-11/12 max-w-[120rem]">
+        <h2 className="mb-32 lg:mb-44">
+          <span className="block uppercase relative text-center text-[4rem] tracking-wide mb-14 font-bold">Projects</span>
           <span className="block text-center m-auto text-gray-500 text-3xl md:text-[2rem] font-medium max-w-7xl leading-relaxed">
             All my projects include links to the code and live version. Click the button to learn more about each one.
           </span>
         </h2>
-        <div className="projects__content">
-          {projectItems}
-        </div>
+        {projectItems}
       </div>
     </section>
   )

@@ -19,18 +19,18 @@ const icons = iconArr.map((icon, index) =>
 function Footer() {
   return (
     <footer className="bg-[black] text-[white]">
-      <div className="main-container">
+      <div className="m-auto w-11/12	max-w-[120rem]">
         <div className="md:flex justify-between block text-center py-24 lg:py-32">
-          <div className="main-footer__row order-2 mb-20">
-            <h2 className="heading uppercase text-4xl tracking-wide	main-footer__heading-sm">
+          <div className="order-2 mb-20">
+            <h2 className="uppercase text-4xl tracking-wide	main-footer__heading-sm">
               <span>Social</span>
             </h2>
             <div className="flex justify-center mt-8">
               {icons}
             </div>
           </div>
-          <div className="main-footer__row md:w-5/12 max-w-3xl w-full">
-            <h4 className="heading uppercase text-4xl tracking-wide	text-lt">Omnia Abdelwahab</h4>
+          <div className="md:w-5/12 max-w-3xl w-full">
+            <h4 className="uppercase text-4xl tracking-wide	text-lt">Omnia Abdelwahab</h4>
             <p className="mt-8 text-2xl leading-relaxed text-[#eee]">
               A passionate frontend developer based in Istanbul, Turkey.
             </p>

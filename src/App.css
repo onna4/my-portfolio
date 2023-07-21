@@ -36,20 +36,6 @@ html {
     }
   }
 
-body {
-  box-sizing: border-box;
-  position: relative;
-  line-height: 1.5;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  font-family: 'Barlow', sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 li {
   list-style: none;
 }
@@ -59,40 +45,10 @@ a:focus {
   outline: none;
 }
 
-button {
-  border: none;
-  cursor: pointer;
+.mouse::before {
+  animation: wheel 1.3s infinite;
+  -webkit-animation: wheel 1.3s infinite;
 }
-
-.main-container {
-  max-width: 120rem;
-  margin: auto;
-  width: 92%;
-}
-
-.sec-pad {
-  padding: 12rem 0;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .sec-pad {
-    padding: 8rem 0;
-  }
-}
-
-.d-none {
-  display: none;
-}
-
-.about__content-details-para--hl {
-  font-weight: 700;
-  margin: 0 3px;
-}
-
-  .mouse::before {
-    animation: wheel 1.3s infinite;
-    -webkit-animation: wheel 1.3s infinite;
-  }
 
 @keyframes wheel {
   to {

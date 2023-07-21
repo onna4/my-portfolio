@@ -32,7 +32,7 @@ export default function Header() {
   const mainNav = navLinks.map((link, index) =>
     <li className="header__link-wrapper" key={index} >
       <a href={link.href}
-        className="inline-block text-gray-800 hover:text-violet-500 text-2xl	md:text-[1.6rem] py-12 px-7 md:px-12 md:py-9 uppercase font-bold tracking-wider transition-colors">
+        className="inline-block text-gray-800 hover:text-violet-500 text-2xl md:text-[1.6rem] py-12 px-7 md:px-12 md:py-9 uppercase font-bold tracking-wider transition-colors">
         {link.linkName}
       </a>
     </li>
@@ -40,7 +40,7 @@ export default function Header() {
 
   const mobNav = navLinks.map((link, index) => 
     <li className="header__sm-menu-link" key={index} >
-      <a onClick={hideMenu} href={link.href} className={`block no-underline text-right	font-bold uppercase text-[1.6rem] hover:text-violet-500 transition-colors	text-gray-800 border-b border-solid border-gray-200 ${index === 0? `border-t`: ""} px-12 py-10 tracking-[2px]`} > {link.linkName} </a>
+      <a onClick={hideMenu} href={link.href} className={`block no-underline text-right font-bold uppercase text-[1.6rem] hover:text-violet-500 transition-colors text-gray-800 border-b border-solid border-gray-200 ${index === 0? `border-t`: ""} px-12 py-10 tracking-[2px]`} > {link.linkName} </a>
     </li>
   )
 
@@ -57,27 +57,23 @@ export default function Header() {
           </div>
           <span className="text-3xl uppercase font-bold tracking-wider">Omnia Abdelwahab</span>
         </a>
-        <div className="header__main">
-          <ul className="hidden md:flex">
-            {mainNav}
-          </ul>
-          <div className="block md:hidden py-4">
-            <button onClick={showMenu} className="grid place-items-center" >
-              <img
-                src={showButton? menuIcon: closeIcon}
-                alt="hamburger menu icon"
-                className="w-full"
-              />
-            </button>
-          </div>
+        <ul className="hidden md:flex">
+          {mainNav}
+        </ul>
+        <div className="block md:hidden py-4">
+          <button onClick={showMenu} className="grid place-items-center" >
+            <img
+              src={showButton ? menuIcon : closeIcon}
+              alt="hamburger menu icon"
+              className="w-full"
+            />
+          </button>
         </div>
       </div>
-      <div ref={smallMenuRef} className="absolute w-full top-full invisible shadow-md transition-all bg-white ">
-        <div className="header__sm-menu-content">
-          <ul className="header__sm-menu-links">
-            {mobNav}
-          </ul>
-        </div>
+      <div ref={smallMenuRef} className="absolute w-full top-full invisible shadow-md transition-all bg-white">
+        <ul>
+          {mobNav}
+        </ul>
       </div>
     </header>
   )
