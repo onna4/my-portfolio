@@ -21,7 +21,7 @@ export default function Projects() {
       </div>
       <div className= "flex justify-center flex-col items-center md:items-start py-8">
         <h3 className="xl:font-bold text-4xl md:text-5xl mb-8">{project.title}</h3>
-        <p className="text-3xl text-gray-400 max-w-4xl leading-relaxed mb-12">
+        <p className="text-3xl text-gray-700 max-w-4xl leading-relaxed mb-12">
           {project.description}
         </p>
         <Link
@@ -38,7 +38,7 @@ export default function Projects() {
       <div className="m-auto w-11/12 max-w-[120rem]">
         <h2 className="mb-32 lg:mb-44">
           <span className="block uppercase relative text-center text-[4rem] tracking-wide mb-14 font-bold">Projects</span>
-          <span className="block text-center m-auto text-gray-500 text-3xl md:text-[2rem] font-medium max-w-7xl leading-relaxed">
+          <span className="block text-center m-auto text-gray-700 text-3xl md:text-[2rem] font-medium max-w-7xl leading-relaxed">
             All my projects include links to the code and live version. Click the button to learn more about each one.
           </span>
         </h2>

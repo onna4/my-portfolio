@@ -21,7 +21,7 @@ export default function projectItem() {
             </p>
           </div>
           <div className="mt-20 text-center">
-            <a href={project.liveLink} className="uppercase inline-block font-bold rounded-md bg-white tracking-[2px] shadow-lg transition-transform
+            <a href={project.liveLink} className="uppercase inline-block font-bold rounded-md bg-white text-gray-800 tracking-[2px] shadow-lg transition-transform
               hover:translate-y-[-3px] text-[2rem] py-6 px-32 " target="_blank">Live Link</a>
           </div>
         </div>
@@ -62,8 +62,8 @@ export default function projectItem() {
               >Live Link</a>
               <a
                 href={project.sourceCode}
-                className="uppercase block md:inline mx-auto font-bold bg-white rounded-md tracking-[2px] shadow-lg transition-transform hover:!translate-y-[-3px] text-violet-600 
-                  text-[1.6rem] py-6 px-20 border-2 border-solid border-violet-300 md:mr-0 text-center w-9/12"
+                className="uppercase block md:inline mx-auto font-bold bg-white rounded-md tracking-[2px] shadow-lg transition-transform hover:!translate-y-[-3px] text-gray-800 
+                  text-[1.6rem] py-6 px-20 border-2 border-solid border-gray-500 hover:border-violet-300 md:mr-0 text-center w-9/12"
                 target="_blank"
               >Code Link</a>
             </div>

@@ -5,7 +5,7 @@ export default function About() {
   const skills = ["HTML", "CSS", "JavaScript", "React", "Git", "Figma", "Tailwind CSS"]
   const styledSkill = skills.map((skill, index) => 
     <div key={index}
-         className="font-semibold rounded-md text-2xl mr-6 mb-6 py-4 px-8 text-gray-500 bg-neutral-200">
+         className="font-semibold rounded-md text-2xl mr-6 mb-6 py-4 px-8 text-gray-600 bg-neutral-200">
       {skill}
     </div>
     )
@@ -15,7 +15,7 @@ export default function About() {
       <div className="m-auto w-11/12 max-w-[120rem]">
         <h2 className="mb-32 lg:mb-36">
           <span className="block uppercase relative text-center text-[4rem] tracking-wide mb-14 font-bold">About Me</span>
-          <span className="block text-center m-auto text-gray-500 text-3xl md:text-[2rem] font-medium max-w-7xl leading-relaxed">
+          <span className="block text-center m-auto text-gray-700 text-3xl md:text-[2rem] font-medium max-w-7xl leading-relaxed">
             <p>I'm a frontend developer based out of Istanbul, Turkey. 
               I love building apps that solve real-world problems, and that are delightful to use. 
               My specialities include TypeScript, React JS, Tailwind CSS, and Styled Components.
@@ -25,8 +25,8 @@ export default function About() {
         <div className="grid grid-cols-1 gap-32 lg:grid-cols-2 lg:gap-40 ">
           <div>
             <h3 className="text-[2.4rem] xl:text-[2.8rem] mb-12 font-bold">Get to know me!</h3>
-            <div className="about__content-details">
-              <p className="text-3xl text-gray-500 max-w-[60rem] leading-relaxed mb-16">
+            <div>
+              <p className="text-3xl mx-auto text-gray-700 max-w-[60rem] leading-relaxed mb-16">
                 My background is in pharmacy and healthcare. I have a bachelors degree in pharmacy from Suez canal university. When I'm building websites with coding, I feel like this is my passion.
               </p>
             </div>
